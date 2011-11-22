@@ -26,6 +26,6 @@ files = os.listdir('.')
 fileprefix = 'circles_'
 for filename in files:
   if re.match(fileprefix,filename):
-    subprocess.check_output('echo {filename}'.format(filename=filename),
+    subprocess.check_call(['echo', filename],
         stderr=subprocess.STDOUT,
         shell=True)
