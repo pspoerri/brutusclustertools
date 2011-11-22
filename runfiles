@@ -32,4 +32,4 @@ for filename in files:
     cmd = '{bopts} {cmd}'.format(bopts=brutus_options,
         cmd=cmd_prepared)
     print "Executing ",brutus_command,cmd
-    subprocess.check_call(brutus_command+cmd)
+    subprocess.check_call(brutus_command+cmd,shell=True)
