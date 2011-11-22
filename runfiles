@@ -29,7 +29,7 @@ for filename in files:
   if re.match(fileprefix,filename):
     cmd_prepared = command.format(file=filename,
         prefix=filename)
-    cmd = '{bcmd} {bopts} {cmd}'.format(bcmd=brutus_command
+    cmd = '{bcmd} {bopts} {cmd}'.format(bcmd=brutus_command,
         bopts=brutus_options,
         cmd=cmd_prepared)
     print "Executing ",brutus_command,cmd
