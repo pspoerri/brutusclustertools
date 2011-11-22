@@ -29,7 +29,8 @@ for filename in files:
   if re.match(fileprefix,filename):
     cmd_prepared = command.format(file=filename,
         prefix=filename)
-    cmd = '{bopts} {cmd}'.format(bopts=brutus_options,
+    cmd = '{bcmd} {bopts} {cmd}'.format(bcmd=brutus_command
+        bopts=brutus_options,
         cmd=cmd_prepared)
     print "Executing ",brutus_command,cmd
-    subprocess.check_call(brutus_command+cmd,shell=True)
+    subprocess.check_call(cmd,shell=True)
