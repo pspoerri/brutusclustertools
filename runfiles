@@ -25,5 +25,5 @@ files = os.listdir('.')
 
 fileprefix = 'circles_'
 for filename in files:
-  if re.match(fileprefix,filename)
+  if re.match(fileprefix,filename):
     print filename
