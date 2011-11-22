@@ -26,7 +26,7 @@ files = os.listdir('.')
 
 fileprefix = 'circles_'
 for filename in files:
-  if re.match(fileprefix,filename):
+#if re.match(fileprefix,filename):
     cmd_prepared = command.format(file=filename,
         prefix=filename)
     cmd = '{bcmd} {bopts} {cmd}'.format(bcmd=brutus_command,
