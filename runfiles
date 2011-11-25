@@ -21,8 +21,8 @@ import subprocess
 import time
 
 brutus_command = 'bsub'
-brutus_options = '-R "select[gputype==Fermi]"'
-command = 'BGPU_CSELAB -solver PS -tend 200.0 -dt 0.01 -file {file} -dumpperiod 20 -prefix {prefix}_USING_BGPU_dt0.01_tend50.0_t0.5_dp10 -theta 0.5'
+brutus_options = '-W 7:59 -R "select[gputype==Fermi]"'
+command = 'BGPU_CSELAB -solver PS -tend 200.0 -dt 0.01 -file {file} -dumpperiod 20 -prefix {prefix}_USING_BGPU_dt0.01_tend200.0_t0.5_dp10 -theta 0.5'
 
 files = os.listdir('.')
 
